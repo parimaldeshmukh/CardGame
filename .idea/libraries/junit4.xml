@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="junit4">
+    <CLASSES>
+      <root url="file://E:/SoftwaresAndPlatforms/junit4.11" />
+      <root url="file://E:/SoftwaresAndPlatforms/junit4.11" />
+      <root url="file://E:/SoftwaresAndPlatforms/junit4.11" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://E:/SoftwaresAndPlatforms/junit4.11/javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://E:/SoftwaresAndPlatforms/junit4.11" />
+      <root url="file://E:/SoftwaresAndPlatforms/junit4.11" />
+      <root url="file://E:/SoftwaresAndPlatforms/junit4.11" />
+    </SOURCES>
+    <jarDirectory url="file://E:/SoftwaresAndPlatforms/junit4.11" recursive="false" />
+    <jarDirectory url="file://E:/SoftwaresAndPlatforms/junit4.11" recursive="false" type="SOURCES" />
+  </library>
+</component>

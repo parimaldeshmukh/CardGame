@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="scala" name="Scala">
+      <configuration>
+        <option name="compilerLibraryLevel" value="Global" />
+        <option name="compilerLibraryName" value="scala-compiler" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/out" />
+    <output-test url="file://$MODULE_DIR$/out" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="junit4" level="project" />
+    <orderEntry type="library" exported="" name="scala-compiler" level="application" />
+    <orderEntry type="library" exported="" name="scala-libraries" level="project" />
+    <orderEntry type="library" exported="" name="specs_2.9.1-1.6.9" level="project" />
+  </component>
+</module>
+

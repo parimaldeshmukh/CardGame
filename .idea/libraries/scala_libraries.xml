@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="scala-libraries">
+    <CLASSES>
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/akka-actors.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/jline.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-actors-migration.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-actors.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-compiler.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-library.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-partest-javaagent.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-partest.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-reflect.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scala-swing.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/scalap.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/scala-2.10.0-RC2/lib/typesafe-config.jar!/" />
+      <root url="jar://E:/SoftwaresAndPlatforms/mockito-all-1.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
