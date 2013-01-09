@@ -7,9 +7,9 @@ class DeckSpecs{
   def itShufflesTheDeckOfCards() {
     //given
     val deck = new DeckBuilder buildDeck()
-    val card0 = deck cards (0)
-    val card1 = deck cards (1)
-    val card2 = deck cards (2)
+    val card0 = deck cards 0
+    val card1 = deck cards 1
+    val card2 = deck cards 2
 
     //when
     val shuffledDeck = deck shuffle

@@ -17,7 +17,7 @@ class CardGameSpecs {
     cardGame distributeCardTo(allPlayers, unShuffledDeck)
 
     //when
-    val winningPlayer = cardGame play(1)
+    val winningPlayer = cardGame play 1
     //then
     Assert assertEquals(allPlayers(3), winningPlayer)
   }
@@ -31,11 +31,11 @@ class CardGameSpecs {
     val allPlayers = List(new Player, new Player, new Player, new Player)
     val cardGame=new CardGame(allPlayers)
     (0 to 4) foreach {
-      i =>
+      time =>
         cardGame distributeCardTo(allPlayers, unShuffledDeck)
     }
     //when
-    val winningPlayer = cardGame play(5)
+    val winningPlayer = cardGame play 5
 
     //then
     Assert assertEquals(allPlayers(3), winningPlayer)

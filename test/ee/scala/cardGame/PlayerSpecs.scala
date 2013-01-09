@@ -16,7 +16,7 @@ class PlayerSpecs {
     //when
     cardGame distributeCardTo(players, shuffledDeck)
     //then
-    Assert assertEquals(expected, players(0) cards (0))
+    Assert assertEquals(expected, players(0) cards 0)
   }
 
   @Test
@@ -30,14 +30,14 @@ class PlayerSpecs {
     val expected1 = shuffledDeck(1)
     val expected2 = shuffledDeck(2)
     val expected3 = shuffledDeck(3)
-    val allPlayers = List(new Player, new Player, new Player, new Player)
-    val cardGame=new CardGame(allPlayers)
+    val players = List(new Player, new Player, new Player, new Player)
+    val cardGame=new CardGame(players)
     //when
-    cardGame distributeCardTo(allPlayers, shuffledDeck)
+    cardGame distributeCardTo(players, shuffledDeck)
     //then
-    Assert assertEquals(expected0, allPlayers(0) cards 0)
-    Assert assertEquals(expected1, allPlayers(1) cards 0)
-    Assert assertEquals(expected2, allPlayers(2) cards 0)
-    Assert assertEquals(expected3, allPlayers(3) cards 0)
+    Assert assertEquals(expected0, players(0) cards 0)
+    Assert assertEquals(expected1, players(1) cards 0)
+    Assert assertEquals(expected2, players(2) cards 0)
+    Assert assertEquals(expected3, players(3) cards 0)
   }
 }

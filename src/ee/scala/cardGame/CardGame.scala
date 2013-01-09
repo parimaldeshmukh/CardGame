@@ -26,7 +26,7 @@ class CardGame(players: List[Player]) {
     players foreach {
       player =>
         val card = player drawCard()
-        suiteValues addBinding(card suite, card.value)
+        suiteValues addBinding(card suite, card value)
     }
   }
 
