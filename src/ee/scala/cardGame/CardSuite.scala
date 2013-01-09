@@ -1,9 +1,8 @@
 package ee.scala.cardGame
 
-
-object CardSuite extends Enumeration{
+object CardSuite extends Enumeration {
   type CardSuite = Value
 
-  val D, H, C, S= Value
+  val Diamond, Heart, Club, Spade = Value
 }
 

@@ -35,13 +35,13 @@ class CardGame(players: List[Player]) {
       suite =>
         if (suiteValues contains (suite)) {
           val winnerValue = suiteValues.get(suite).get.max
-          return decideWinnerByHighestValue(suite, winnerValue)
+          return selectWinnerByHighestValue(suite, winnerValue)
         }
     }
     new Player
   }
 
-  private def decideWinnerByHighestValue(winningSuite: CardSuite.Value, winningValue: CardFaceValue.Value): Player = {
+  private def selectWinnerByHighestValue(winningSuite: CardSuite.Value, winningValue: CardFaceValue.Value): Player = {
     players foreach {
       player =>
         if ((player.cards(player round).compareTo(winningSuite, winningValue) == 0)) {
