@@ -1,7 +1,8 @@
 package ee.scala.cardGame
+
 import org.junit.{Assert, Test}
 
-class DeckSpecs{
+class DeckSpecs {
 
   @Test
   def itShufflesTheDeckOfCards() {

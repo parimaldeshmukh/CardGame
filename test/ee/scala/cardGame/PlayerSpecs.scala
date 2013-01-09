@@ -12,7 +12,7 @@ class PlayerSpecs {
     val shuffledDeck = deck shuffle()
     val expected = shuffledDeck(0)
     val players = List(new Player)
-    val cardGame=new CardGame(players)
+    val cardGame = new CardGame(players)
     //when
     cardGame distributeCardTo(players, shuffledDeck)
     //then
@@ -30,8 +30,10 @@ class PlayerSpecs {
     val expected1 = shuffledDeck(1)
     val expected2 = shuffledDeck(2)
     val expected3 = shuffledDeck(3)
+
     val players = List(new Player, new Player, new Player, new Player)
-    val cardGame=new CardGame(players)
+
+    val cardGame = new CardGame(players)
     //when
     cardGame distributeCardTo(players, shuffledDeck)
     //then

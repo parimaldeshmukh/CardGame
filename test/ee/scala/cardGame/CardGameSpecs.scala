@@ -13,7 +13,7 @@ class CardGameSpecs {
     val unShuffledDeck = deck cards
 
     val allPlayers = List(new Player, new Player, new Player, new Player)
-    val cardGame=new CardGame(allPlayers)
+    val cardGame = new CardGame(allPlayers)
     cardGame distributeCardTo(allPlayers, unShuffledDeck)
 
     //when
@@ -29,7 +29,7 @@ class CardGameSpecs {
     val deck = new DeckBuilder buildDeck()
     val unShuffledDeck = deck cards
     val allPlayers = List(new Player, new Player, new Player, new Player)
-    val cardGame=new CardGame(allPlayers)
+    val cardGame = new CardGame(allPlayers)
     (0 to 4) foreach {
       time =>
         cardGame distributeCardTo(allPlayers, unShuffledDeck)
