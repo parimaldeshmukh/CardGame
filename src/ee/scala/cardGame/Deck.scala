@@ -5,11 +5,10 @@ import util.Random
 
 class Deck(cards : ListBuffer[Card] ) {
 
-  def shuffle(): ListBuffer[Card] = {
+  def shuffle(): Deck = {
     val shuffledDeck = Random shuffle cards
 
-    if (satisfyConditionsOn(shuffledDeck)) return shuffledDeck else shuffle()
-    shuffledDeck
+    if (satisfyConditionsOn(shuffledDeck)) return this else shuffle()
   }
 
   private def satisfyConditionsOn(shuffledDeck: ListBuffer[Card]): Boolean = {
@@ -18,6 +17,10 @@ class Deck(cards : ListBuffer[Card] ) {
         if (shuffledDeck(index).suite equals shuffledDeck(index + 1).suite equals shuffledDeck(index + 2).suite) return false
     }
     true
+  }
+
+  def drawCard() : Card = {
+    cards.remove(0)
   }
 
 }

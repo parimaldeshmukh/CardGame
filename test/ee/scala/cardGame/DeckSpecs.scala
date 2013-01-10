@@ -7,17 +7,14 @@ class DeckSpecs {
   @Test
   def itShufflesTheDeckOfCards() {
     //given
-    val deck = DeckBuilder buildStandardDeck
-    val card0 = deck cards 0
-    val card1 = deck cards 1
-    val card2 = deck cards 2
+    val orderedDeck = DeckBuilder buildStandardDeck
 
     //when
-    val shuffledDeck = deck shuffle
+    val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
 
     //then
-    Assert assertNotEquals(card0, shuffledDeck(0))
-    Assert assertNotEquals(card1, shuffledDeck(1))
-    Assert assertNotEquals(card2, shuffledDeck(2))
+    Assert assertNotEquals(orderedDeck drawCard, shuffledDeck drawCard)
+    Assert assertNotEquals(orderedDeck drawCard, shuffledDeck drawCard)
+    Assert assertNotEquals(orderedDeck drawCard, shuffledDeck drawCard)
   }
 }
