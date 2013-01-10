@@ -8,7 +8,7 @@ class PlayerSpecs {
   def itDistributesTheCardsToSinglePlayer() {
 
     //given
-    val deck = new DeckBuilder buildDeck()
+    val deck = new DeckBuilder buildStandardDeck()
     val shuffledDeck = deck shuffle()
     val expected = shuffledDeck(0)
     val players = List(new Player)
@@ -23,7 +23,7 @@ class PlayerSpecs {
   def itDistributesTheCardsToMultiplePlayers() {
 
     //given
-    val deck = new DeckBuilder buildDeck()
+    val deck = new DeckBuilder buildStandardDeck()
     val shuffledDeck = deck shuffle()
 
     val expected0 = shuffledDeck(0)

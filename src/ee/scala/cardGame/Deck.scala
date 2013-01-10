@@ -3,8 +3,7 @@ package ee.scala.cardGame
 import collection.mutable.ListBuffer
 import util.Random
 
-class Deck() {
-  var cards: ListBuffer[Card] = new ListBuffer
+class Deck(cards : ListBuffer[Card] ) {
 
   def shuffle(): ListBuffer[Card] = {
     val shuffledDeck = Random shuffle cards
@@ -20,5 +19,6 @@ class Deck() {
     }
     true
   }
+
 }
 

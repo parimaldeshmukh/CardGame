@@ -1,14 +1,18 @@
 package ee.scala.cardGame
 
-class DeckBuilder {
-  var deck = new Deck
+import ee.scala.cardGame.Card
+import collection.mutable.ListBuffer
 
-  def buildDeck() = {
+object DeckBuilder {
+
+  val cards : ListBuffer[Card] = new ListBuffer[Card]
+
+  def buildStandardDeck() : Deck = {
     CardSuite.values.foreach(suite =>
       CardFaceValue.values.foreach(faceValue =>
-        deck.cards += new Card(suite, faceValue)
+        cards +=(new Card(suite, faceValue))
       )
     )
-    deck
+    new Deck(cards)
   }
 }

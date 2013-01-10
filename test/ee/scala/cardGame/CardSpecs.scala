@@ -10,7 +10,7 @@ class CardSpecs {
   def itComparesTwoCards() {
 
     //given
-    val deck = new DeckBuilder buildDeck()
+    val deck = new DeckBuilder buildStandardDeck()
     val unShuffledDeck = deck cards
     val card1 = unShuffledDeck(0)
     val card2 = unShuffledDeck(1)

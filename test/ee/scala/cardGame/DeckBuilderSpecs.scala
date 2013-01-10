@@ -7,7 +7,7 @@ class DeckBuilderSpecs {
   def itChecksForPopulatedDeck() {
     //given
     //when
-    val deck = new DeckBuilder buildDeck
+    val deck = new DeckBuilder buildStandardDeck
 
     //then
     Assert assertEquals(deck.cards(0).suite, CardSuite.Diamond)

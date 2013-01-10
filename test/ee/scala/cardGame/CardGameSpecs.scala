@@ -9,7 +9,7 @@ class CardGameSpecs {
   def itPlaysGameForSingleCard() {
 
     //given
-    val deck = new DeckBuilder buildDeck()
+    val deck = new DeckBuilder buildStandardDeck()
     val unShuffledDeck = deck cards
 
     val allPlayers = List(new Player, new Player, new Player, new Player)
@@ -26,7 +26,7 @@ class CardGameSpecs {
   def itPlaysGameForFiveCards() {
 
     //given
-    val deck = new DeckBuilder buildDeck()
+    val deck = new DeckBuilder buildStandardDeck()
     val unShuffledDeck = deck cards
     val allPlayers = List(new Player, new Player, new Player, new Player)
     val cardGame = new CardGame(allPlayers)
