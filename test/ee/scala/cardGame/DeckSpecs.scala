@@ -13,8 +13,8 @@ class DeckSpecs {
     val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
 
     //then
-    Assert assertNotEquals(orderedDeck drawCard, shuffledDeck drawCard)
-    Assert assertNotEquals(orderedDeck drawCard, shuffledDeck drawCard)
-    Assert assertNotEquals(orderedDeck drawCard, shuffledDeck drawCard)
+    Assert assertNotEquals(orderedDeck topCard, shuffledDeck topCard)
+    Assert assertNotEquals(orderedDeck topCard, shuffledDeck topCard)
+    Assert assertNotEquals(orderedDeck topCard, shuffledDeck topCard)
   }
 }

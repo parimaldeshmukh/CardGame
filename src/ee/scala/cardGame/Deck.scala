@@ -20,7 +20,7 @@ class Deck(cards : ListBuffer[Card] ) {
     true
   }
 
-  def drawCard() : Card = {
+  def topCard() : Card = {
     cards.remove(0)
   }
 

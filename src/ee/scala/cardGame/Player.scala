@@ -11,7 +11,17 @@ class Player {
     cardsInHand.remove(0)
   }
 
-  def drawCardFrom(deck : Deck) = {
-    cardsInHand.+=(deck.drawCard)
+  def take(card : Card) = {
+    cardsInHand.+=(card)
   }
+
+  def distribute(deck : Deck, players : List[Player]) {
+
+   players.foreach(player => player take deck.topCard())
+
+   this take deck.topCard()
+
+  }
+
+
 }

@@ -25,7 +25,7 @@
 //  private def drawCardForEveryPlayer() {
 //    players foreach {
 //      player =>
-//        val card = player drawCard()
+//        val card = player topCard()
 //        suiteValues addBinding(card suite, card value)
 //    }
 //  }
