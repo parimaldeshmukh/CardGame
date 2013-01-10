@@ -19,7 +19,7 @@ class PlayerSpecs {
   }
 
   @Test
-  def itDistributesGivenDeckToGivenPlayers() {
+  def itDistributesFromGivenDeckToGivenPlayers() {
 
     //given
     val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
@@ -29,11 +29,10 @@ class PlayerSpecs {
     //when
     dealer distribute(shuffledDeck,players)
 
+    val cardsWithPlayers = List(dealer showCard(), players(0) showCard(), players(1) showCard(), players(2) showCard())
+
     //then
-   Assert assertNotNull(dealer showCard())
-   Assert assertNotNull(players(0) showCard())
-   Assert assertNotNull(players(1) showCard())
-   Assert assertNotNull(players(2) showCard())
+   Assert assertTrue (cardsWithPlayers.distinct.length==4)
 
   }
 }
