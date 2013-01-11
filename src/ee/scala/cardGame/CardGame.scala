@@ -1,4 +1,6 @@
-//package ee.scala.cardGame
+package ee.scala.cardGame
+
+
 //
 //import collection.mutable.{ListBuffer, MultiMap, HashMap, Set}
 //
@@ -65,3 +67,25 @@
 //    new Player
 //  }
 //}
+
+class CardGame(players : List[Player], deck : Deck) {
+
+  def playRound() : Player ={
+    players(0) deal(deck, List(players(1), players(2), players(3)))
+
+    findHighCardHolder()
+  }
+
+  def findHighCardHolder() : Player = {
+
+    var highCardHolder : Player = new Player
+    highCardHolder take(new Card(CardSuite.Spade, CardFace.Ace))
+    players.foreach(player=>
+
+    if(player.showCard.compareTo(highCardHolder showCard) > 0) highCardHolder=player
+
+    )
+    highCardHolder
+  }
+
+}

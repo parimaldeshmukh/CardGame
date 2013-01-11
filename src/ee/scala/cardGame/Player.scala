@@ -8,14 +8,14 @@ class Player {
   var round = 0
 
   def showCard() : Card = {
-    cardsInHand.remove(0)
+    cardsInHand.head
   }
 
   def take(card : Card) = {
     cardsInHand.+=(card)
   }
 
-  def distribute(deck : Deck, players : List[Player]) {
+  def deal(deck : Deck, players : List[Player]) {
 
    players.foreach(player => player take deck.topCard())
 

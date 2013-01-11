@@ -10,14 +10,19 @@ class CardSpecs {
   def itComparesTwoCards() {
 
     //given
-    val higherCard =  new Card(CardSuite.Diamond, CardFace.King)
-    val lowerCard =  new Card(CardSuite.Diamond, CardFace.Five)
+    val higherFaceCard =  new Card(CardSuite.Diamond, CardFace.King)
+    val lowerFaceCard =  new Card(CardSuite.Diamond, CardFace.Five)
+
+    val higherSuiteCard =  new Card(CardSuite.Diamond, CardFace.Four)
+    val lowerSuiteCard =  new Card(CardSuite.Spade, CardFace.Five)
 
     //when
-    val comparison:Int = higherCard.compareTo(lowerCard)
+    val faceComparison:Int = higherFaceCard.compareTo(lowerFaceCard)
+    val suiteComparison:Int = higherSuiteCard.compareTo(lowerSuiteCard)
 
     //then
-    Assert assertTrue (comparison > 0)
+    Assert assertTrue (faceComparison > 0)
+    Assert assertTrue (suiteComparison > 0)
   }
 
 }

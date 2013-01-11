@@ -5,20 +5,6 @@ import org.junit.{Assert, Test}
 class PlayerSpecs {
 
   @Test
-  def itDrawsACardFromADeck() {
-
-    //given
-    val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
-    val player = new Player
-
-    //when
-    player take shuffledDeck.topCard
-
-    //then
-    Assert assertNotNull (player showCard())
-  }
-
-  @Test
   def itDistributesFromGivenDeckToGivenPlayers() {
 
     //given
@@ -27,7 +13,7 @@ class PlayerSpecs {
     val dealer = new Player
 
     //when
-    dealer distribute(shuffledDeck,players)
+    dealer deal(shuffledDeck,players)
 
     val cardsWithPlayers = List(dealer showCard(), players(0) showCard(), players(1) showCard(), players(2) showCard())
 
