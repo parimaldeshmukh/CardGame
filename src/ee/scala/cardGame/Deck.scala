@@ -13,8 +13,8 @@ class Deck(cards : ListBuffer[Card] ) {
   private def satisfyRandomiseConditionsOn(shuffledCards: ListBuffer[Card]): Boolean = {
     (1 to 49) foreach {
       index =>
-        if (shuffledCards(index).suite equals shuffledCards(index + 1).suite equals
-          shuffledCards(index + 2).suite)
+        if (shuffledCards(index).getSuite() equals shuffledCards(index + 1).getSuite() equals
+          shuffledCards(index + 2).getSuite())
           return false
     }
     true

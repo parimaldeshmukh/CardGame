@@ -9,7 +9,7 @@ object DeckBuilder {
 
   def buildStandardDeck() : Deck = {
     CardSuite.values.foreach(suite =>
-      CardFaceValue.values.foreach(faceValue =>
+      CardFace.values.foreach(faceValue =>
         cards +=(new Card(suite, faceValue))
       )
     )

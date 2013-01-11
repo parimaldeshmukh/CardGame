@@ -4,7 +4,7 @@
 //
 //class CardGame(players: List[Player]) {
 //
-//  private val suiteValues = new HashMap[CardSuite.Value, Set[CardFaceValue.Value]] with MultiMap[CardSuite.Value, CardFaceValue.Value]
+//  private val suiteValues = new HashMap[CardSuite.Value, Set[CardFace.Value]] with MultiMap[CardSuite.Value, CardFace.Value]
 //
 //  def distributeCardTo(players: List[Player], shuffledDeck: ListBuffer[Card]) {
 //    players foreach {
@@ -41,7 +41,7 @@
 //    new Player
 //  }
 //
-//  private def selectWinnerByHighestValue(winningSuite: CardSuite.Value, winningValue: CardFaceValue.Value): Player = {
+//  private def selectWinnerByHighestValue(winningSuite: CardSuite.Value, winningValue: CardFace.Value): Player = {
 //    players foreach {
 //      player =>
 //        if ((player.cardsInHand(player round).compareTo(winningSuite, winningValue) == 0)) {

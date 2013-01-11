@@ -11,7 +11,7 @@ class DeckBuilderSpecs {
 //
 //    //then
 //    Assert assertEquals(deck.cards(0).suite, CardSuite.Diamond)
-//    Assert assertEquals(deck.cards(0).value, CardFaceValue.Ace)
+//    Assert assertEquals(deck.cards(0).value, CardFace.Ace)
 //
 //  }
 }

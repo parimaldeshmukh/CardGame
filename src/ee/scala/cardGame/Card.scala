@@ -1,13 +1,17 @@
 package ee.scala.cardGame
 
-class Card(suite1: CardSuite.Value, value1: CardFaceValue.Value) {
-  val suite = suite1
-  val value = value1
+class Card(suite: CardSuite.Value, face: CardFace.Value) {
 
-  def compareTo(suite: CardSuite.Value, value: CardFaceValue.Value): Int = {
-    if ((this.suite compareTo suite) == 0) {
-      return this.value compareTo value
-    }
-    -1
+  def compareTo(other: Card):Int = {
+    val suiteComparison : Int = this.suite.compareTo(other.getSuite())
+    if (suiteComparison!=0) suiteComparison else this.face.compareTo(other.getFace())
   }
+
+  def getSuite() : CardSuite.Value = {
+    suite
+  }
+  def getFace() : CardFace.Value = {
+    face
+  }
+
 }
