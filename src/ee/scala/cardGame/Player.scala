@@ -5,7 +5,6 @@ import collection.mutable.ListBuffer
 class Player {
   val cardsInHand: ListBuffer[Card] = new ListBuffer
   var winCount = 0
-  var round = 0
 
   def showCard() : Card = {
     cardsInHand.head
@@ -23,5 +22,13 @@ class Player {
 
   }
 
+  def notifyWinner() {
+    winCount+=1
+  }
+
+
+  def roundsWon() : Int = {
+    winCount
+  }
 
 }

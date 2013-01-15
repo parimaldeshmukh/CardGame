@@ -88,4 +88,21 @@ class CardGame(players : List[Player], deck : Deck) {
     highCardHolder
   }
 
+  def play() : Player = {
+
+    1 to 5 foreach(roundNumber=>
+    players foreach( _ take deck.topCard )
+    )
+
+    1 to 5 foreach {roundNumber=>
+      playRound notifyWinner
+    }
+
+    var winner = new Player
+    players.foreach(player =>
+    if (player.roundsWon > winner.roundsWon) winner=player
+    )
+    winner
+  }
+
 }

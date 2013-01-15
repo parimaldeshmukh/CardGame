@@ -39,17 +39,32 @@ class CardGameSpecs {
 
 
 
-//  @Test
-//  def itPlaysGameOfFiveRounds() {
-//
-//    //given
-//    val cardGame = new CardGame(players, shuffledDeck)
-//
-//    //when
-//    val winner = cardGame.play()
-//
-//
-//    //then
-//    assert
-//  }
+  @Test
+  def itPlaysGameOfFiveRounds() {
+
+    //given
+
+    val playerOne = mock (classOf [Player])
+    val playerTwo = mock (classOf [Player])
+    val playerThree = mock (classOf [Player])
+    val playerFour = mock (classOf [Player])
+
+
+    given (playerOne showCard) willReturn new Card(Diamond, Two) willReturn new Card(Club, Ace) willReturn new Card(Heart, Queen) willReturn new Card(Diamond, Three) willReturn new Card(Spade, Jack)
+    given (playerTwo showCard) willReturn new Card(Spade, Ace) willReturn new Card(Heart, King) willReturn new Card(Heart, Two) willReturn new Card(Spade, Ace) willReturn new Card(Club, Jack)
+    given (playerThree showCard) willReturn new Card(Club, King) willReturn new Card(Diamond, Three) willReturn new Card(Heart, Three) willReturn new Card(Spade, Six) willReturn new Card(Heart, Jack)
+    given (playerFour showCard) willReturn new Card(Heart, Four) willReturn new Card(Diamond, Five) willReturn new Card(Heart, Five) willReturn new Card(Diamond, Eight) willReturn new Card(Diamond, Jack)
+
+    val players = List(playerOne, playerTwo, playerThree, playerFour)
+    val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
+
+    val game = new CardGame(players, shuffledDeck)
+
+    //when
+    val winner = game play
+
+
+    //then
+    assert (winner equals playerOne)
+  }
 }
