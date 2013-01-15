@@ -2,6 +2,9 @@ package ee.scala.cardGame
 
 import org.junit.Test
 import org.junit.Assert
+import org.mockito.Mockito._
+import org.mockito.Matchers._
+import org.mockito.BDDMockito._
 
 class CardGameSpecs {
 
@@ -10,14 +13,27 @@ class CardGameSpecs {
 
     //given
     val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
-    val players = List(new Player, new Player, new Player, new Player)
+
+    val playerOne = mock(classOf[Player])
+    val playerTwo = mock(classOf[Player])
+    val playerThree = mock(classOf[Player])
+    val playerFour = mock(classOf[Player])
+
+    given(playerOne showCard) willReturn new Card(CardSuite.Diamond, CardFace.Two)
+    given(playerTwo showCard) willReturn new Card(CardSuite.Spade, CardFace.Ace)
+    given(playerThree showCard) willReturn new Card(CardSuite.Club, CardFace.King)
+    given(playerFour showCard) willReturn new Card(CardSuite.Heart, CardFace.Four)
+
+    val players = List(playerOne, playerTwo, playerThree, playerFour)
     val cardGame = new CardGame(players, shuffledDeck)
+
+
 
     //when
     val winner = cardGame.playRound()
 
     //then
-    Assert assertNotNull winner
+    assert(winner equals playerOne)
   }
 //
 //  @Test
