@@ -1,10 +1,11 @@
 package ee.scala.cardGame
 
+import CardSuite._
+import CardFace._
 import org.junit.Test
-import org.junit.Assert
 import org.mockito.Mockito._
-import org.mockito.Matchers._
 import org.mockito.BDDMockito._
+import org.mockito.Matchers._
 
 class CardGameSpecs {
 
@@ -14,44 +15,41 @@ class CardGameSpecs {
     //given
     val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
 
-    val playerOne = mock(classOf[Player])
-    val playerTwo = mock(classOf[Player])
-    val playerThree = mock(classOf[Player])
-    val playerFour = mock(classOf[Player])
+    val playerOne = mock (classOf [Player])
+    val playerTwo = mock (classOf [Player])
+    val playerThree = mock (classOf [Player])
+    val playerFour = mock (classOf [Player])
 
-    given(playerOne showCard) willReturn new Card(CardSuite.Diamond, CardFace.Two)
-    given(playerTwo showCard) willReturn new Card(CardSuite.Spade, CardFace.Ace)
-    given(playerThree showCard) willReturn new Card(CardSuite.Club, CardFace.King)
-    given(playerFour showCard) willReturn new Card(CardSuite.Heart, CardFace.Four)
+    given (playerOne showCard) willReturn new Card(Diamond, Two)
+    given (playerTwo showCard) willReturn new Card(Spade, Ace)
+    given (playerThree showCard) willReturn new Card(Club, King)
+    given (playerFour showCard) willReturn new Card(Heart, Four)
 
     val players = List(playerOne, playerTwo, playerThree, playerFour)
-    val cardGame = new CardGame(players, shuffledDeck)
+    val game = new CardGame(players, shuffledDeck)
 
 
 
     //when
-    val winner = cardGame.playRound()
+    val winner = game playRound
 
     //then
-    assert(winner equals playerOne)
+    assert (winner equals playerOne)
   }
-//
+
+
+
 //  @Test
-//  def itPlaysGameForFiveCards() {
+//  def itPlaysGameOfFiveRounds() {
 //
 //    //given
-//    val deck = new DeckBuilder buildStandardDeck()
-//    val unShuffledDeck = deck cards
-//    val allPlayers = List(new Player, new Player, new Player, new Player)
-//    val cardGame = new CardGame(allPlayers)
-//    (0 to 4) foreach {
-//      time =>
-//        cardGame distributeCardTo(allPlayers, unShuffledDeck)
-//    }
+//    val cardGame = new CardGame(players, shuffledDeck)
+//
 //    //when
-//    val winningPlayer = cardGame play 5
+//    val winner = cardGame.play()
+//
 //
 //    //then
-//    Assert assertEquals(allPlayers(3), winningPlayer)
+//    assert
 //  }
 }
