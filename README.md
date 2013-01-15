@@ -1,1 +1,4 @@
-Need To add the junit jar as the library.
+CardGame
+
+Todo:
+mocking (specs2 or separately through mockito)
