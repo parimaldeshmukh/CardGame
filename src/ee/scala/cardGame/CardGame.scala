@@ -8,7 +8,7 @@ class CardGame(players : List[Player], deck : Deck) {
     findHighCardHolder()
   }
 
-  def findHighCardHolder() : Player = {
+  private def findHighCardHolder() : Player = {
 
     var highCardHolder : Player = new Player
     highCardHolder take(new Card(CardSuite.Spade, CardFace.Ace))
