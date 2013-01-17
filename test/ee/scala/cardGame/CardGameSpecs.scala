@@ -50,10 +50,15 @@ class CardGameSpecs {
     val playerFour = mock (classOf [Player])
 
 
-    given (playerOne showCard) willReturn new Card(Diamond, Two) willReturn new Card(Club, Ace) willReturn new Card(Heart, Queen) willReturn new Card(Diamond, Three) willReturn new Card(Spade, Jack)
-    given (playerTwo showCard) willReturn new Card(Spade, Ace) willReturn new Card(Heart, King) willReturn new Card(Heart, Two) willReturn new Card(Spade, Ace) willReturn new Card(Club, Jack)
-    given (playerThree showCard) willReturn new Card(Club, King) willReturn new Card(Diamond, Three) willReturn new Card(Heart, Three) willReturn new Card(Spade, Six) willReturn new Card(Heart, Jack)
-    given (playerFour showCard) willReturn new Card(Heart, Four) willReturn new Card(Diamond, Five) willReturn new Card(Heart, Five) willReturn new Card(Diamond, Eight) willReturn new Card(Diamond, Jack)
+    given (playerOne showCard) willReturn new Card(Diamond, Two)
+    given (playerTwo showCard) willReturn new Card(Spade, Ace)
+    given (playerThree showCard) willReturn new Card(Club, King)
+    given (playerFour showCard) willReturn new Card(Heart, Four)
+
+    given (playerFour roundsWon) willReturn 3
+    given (playerThree roundsWon) willReturn 0
+    given (playerTwo roundsWon) willReturn 0
+    given (playerOne roundsWon) willReturn 2
 
     val players = List(playerOne, playerTwo, playerThree, playerFour)
     val shuffledDeck = DeckBuilder buildStandardDeck() shuffle
@@ -65,6 +70,6 @@ class CardGameSpecs {
 
 
     //then
-    assert (winner equals playerOne)
+    assert (winner equals playerFour)
   }
 }
